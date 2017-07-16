@@ -1,0 +1,323 @@
+<project
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd"
+	xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>1.5.4.RELEASE</version>
+		<relativePath /> <!-- lookup parent from repository -->
+	</parent>
+
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.fintx</groupId>
+	<artifactId>fintx-parent</artifactId>
+	<version>0.0.1</version>
+	<packaging>pom</packaging>
+	<organization>
+		<name>FinTx</name>
+		<url>http://www.fintx.org</url>
+	</organization>
+	<licenses>
+		<license>
+			<name>Apache License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0</url>
+		</license>
+	</licenses>
+	<developers>
+		<developer>
+			<id>bluecreator</id>
+			<name>Qiang Wang</name>
+			<email>qiang.x.wang at gmail.com</email>
+			<organization>FinTx</organization>
+			<organizationUrl>http://www.fintx.org</organizationUrl>
+			<roles>
+				<role>Project lead</role>
+			</roles>
+		</developer>
+	</developers>
+
+	<properties>
+		<!-- spring cloud -->
+
+		<!-- spring boot -->
+		<spring-boot-admin.version>1.5.2</spring-boot-admin.version>
+		<grpc-spring-boot-starter.version>2.0.4</grpc-spring-boot-starter.version>
+		<mybatis-spring-boot-starter.version>1.3.0</mybatis-spring-boot-starter.version>
+		<pagehelper-spring-boot-starter.version>1.1.2</pagehelper-spring-boot-starter.version>
+		<!-- no starter for hbase(hadoop)? -->
+
+
+
+		<!-- spring -->
+		<!--<spring-data-commons.version>2.0.0.M2</spring-data-commons.version> 
+			<spring-data-redis.version>2.0.0.M2</spring-data-redis.version> <spring-data-mongodb.version>2.0.0.M2</spring-data-mongodb.version> 
+			<spring-data-neo4j.version>2.0.0.M2</spring-data-neo4j.version> <spring-data-cassandra.version>2.0.0.M2</spring-data-cassandra.version> -->
+		<spring-data-hadoop.version>2.5.0.RELEASE</spring-data-hadoop.version>
+
+
+		<!-- aop -->
+		<cglib.version>3.2.4</cglib.version>
+
+		<!-- mybatis -->
+		<mybatis.version>3.4.1</mybatis.version>
+		<mybatis-spring.version>1.3.0</mybatis-spring.version>
+		<pagehelper.version>4.1.6</pagehelper.version>
+		<mybatis-generator.version>1.3.5</mybatis-generator.version>
+
+
+		<!-- security -->
+		<shiro.version>1.4.0</shiro.version>
+		<esapi.version>2.1.0.1</esapi.version>
+		<antisamy.version>1.5.5</antisamy.version>
+
+		<!-- j2ee -->
+
+
+		<!-- connection pool -->
+		<!--deprecated <c3p0.version>0.9.1.2</c3p0.version> -->
+		<druid.version>1.1.0</druid.version>
+
+		<!-- scheduler -->
+		<quartz.version>2.3.0</quartz.version>
+
+		<!-- Json operation -->
+		<fastjson.version>1.2.34</fastjson.version>
+
+
+		<!-- document operation -->
+		<poi.version>3.16</poi.version>
+		<itextpdf.version>5.5.11</itextpdf.version>
+
+		<!-- util -->
+
+		<commons-net.version>3.6</commons-net.version>
+		<commons-fileupload.version>1.3.3</commons-fileupload.version>
+		<commons-lang.version>3.6</commons-lang.version>
+		<guava.version>22.0</guava.version>
+		<okhttp.version>3.8.1</okhttp.version>
+		<retrofit.version>2.3.0</retrofit.version>
+		<netty.version>4.1.13</netty.version>
+		<!-- logging -->
+
+
+		<!-- serialization -->
+		<protobuf.version>3.3.1</protobuf.version><!-- deprecated use grpc starter 
+			instead -->
+
+		<!-- RPC -->
+		<grpc.version>1.4.0</grpc.version><!-- deprecated use grpc starter instead -->
+		
+		<!-- other -->
+		<mongo-java-driver.version></mongo-java-driver.version>
+	</properties>
+
+	<dependencyManagement>
+		<dependencies>
+
+			<dependency>
+				<groupId>de.codecentric</groupId>
+				<artifactId>spring-boot-admin-server</artifactId>
+				<version>${spring-boot-admin.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>de.codecentric</groupId>
+				<artifactId>spring-boot-admin-server-ui</artifactId>
+				<version>${spring-boot-admin.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>de.codecentric</groupId>
+				<artifactId>spring-boot-admin-starter-client</artifactId>
+				<version>${spring-boot-admin.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mybatis.spring.boot</groupId>
+				<artifactId>mybatis-spring-boot-starter</artifactId>
+				<version>${mybatis-spring-boot-starter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.github.pagehelper</groupId>
+				<artifactId>pagehelper-spring-boot-starter</artifactId>
+				<version>${pagehelper-spring-boot-starter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.lognet</groupId>
+				<artifactId>grpc-spring-boot-starter</artifactId>
+				<version>${grpc-spring-boot-starter.version}</version>
+				<!-- type>pom</type> -->
+			</dependency>
+
+
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-hadoop</artifactId>
+				<version>${spring-data-hadoop.version}</version>
+			</dependency>
+
+
+
+			<dependency>
+				<groupId>cglib</groupId>
+				<artifactId>cglib</artifactId>
+				<version>${cglib.version}</version>
+			</dependency>
+
+
+
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis</artifactId>
+				<version>${mybatis.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mybatis</groupId>
+				<artifactId>mybatis-spring</artifactId>
+				<version>${mybatis-spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.github.pagehelper</groupId>
+				<artifactId>pagehelper</artifactId>
+				<version>${pagehelper.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mybatis.generator</groupId>
+				<artifactId>mybatis-generator-core</artifactId>
+				<version>${mybatis-generator.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.shiro</groupId>
+				<artifactId>shiro-all</artifactId>
+				<version>${shiro.version}</version>
+				<type>pom</type>
+			</dependency>
+			<dependency>
+				<groupId>org.owasp.esapi</groupId>
+				<artifactId>esapi</artifactId>
+				<version>${esapi.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.owasp.antisamy</groupId>
+				<artifactId>antisamy</artifactId>
+				<version>${antisamy.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>druid</artifactId>
+				<version>${druid.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>org.quartz-scheduler</groupId>
+				<artifactId>quartz</artifactId>
+				<version>${quartz.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.quartz-scheduler</groupId>
+				<artifactId>quartz-jobs</artifactId>
+				<version>${quartz.version}</version>
+			</dependency>
+
+
+
+
+
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi</artifactId>
+				<version>${poi.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.poi</groupId>
+				<artifactId>poi-ooxml</artifactId>
+				<version>${poi.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.itextpdf</groupId>
+				<artifactId>itextpdf</artifactId>
+				<version>${itextpdf.version}</version>
+			</dependency>
+
+
+			<dependency>
+				<groupId>com.alibaba</groupId>
+				<artifactId>fastjson</artifactId>
+				<version>${fastjson.version}</version>
+			</dependency>
+
+
+
+
+			<dependency>
+				<groupId>commons-net</groupId>
+				<artifactId>commons-net</artifactId>
+				<version>${commons-net.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>commons-fileupload</groupId>
+				<artifactId>commons-fileupload</artifactId>
+				<version>${commons-fileupload.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.apache.commons</groupId>
+				<artifactId>commons-lang3</artifactId>
+				<version>${commons-lang.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>com.google.guava</groupId>
+				<artifactId>guava</artifactId>
+				<version>${guava.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.squareup.okhttp3</groupId>
+				<artifactId>okhttp</artifactId>
+				<version>${okhttp.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.squareup.retrofit2</groupId>
+				<artifactId>retrofit</artifactId>
+				<version>${retrofit.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>io.netty</groupId>
+				<artifactId>netty-all</artifactId>
+				<version>${netty.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.google.protobuf</groupId>
+				<artifactId>protobuf-java</artifactId>
+				<version>${protobuf.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>io.grpc</groupId>
+				<artifactId>grpc-all</artifactId>
+				<version>${grpc.version}</version>
+			</dependency>
+
+			<dependency>
+				<groupId>org.mongodb</groupId>
+				<artifactId>mongo-java-driver</artifactId>
+				<version>3.4.2</version>
+			</dependency>
+
+		</dependencies>
+	</dependencyManagement>
+	<dependencies>
+	</dependencies>
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<name>Nexus Release Repository</name>
+			<url>http://nexus.fintx.org/nexus/content/repositories/releases/</url>
+		</repository>
+		<snapshotRepository>
+			<id>snapshots</id>
+			<name>Nexus Snapshot Repository</name>
+			<url>http://nexus.fintx.org/nexus/content/repositories/snapshots/</url>
+		</snapshotRepository>
+	</distributionManagement>
+</project>
