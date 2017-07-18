@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>1.5.4.RELEASE</version>
+		<version>2.0.0.M2</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
@@ -38,6 +38,7 @@
 
 	<properties>
 		<!-- spring cloud -->
+		<spring-cloud.version>Finchley.M1</spring-cloud.version>
 
 		<!-- spring boot -->
 		<spring-boot-admin.version>1.5.2</spring-boot-admin.version>
@@ -78,7 +79,7 @@
 		<druid.version>1.1.0</druid.version>
 
 		<!-- scheduler -->
-		<quartz.version>2.3.0</quartz.version>
+		<!-- quartz.version>2.3.0</quartz.version> -->
 
 		<!-- Json operation -->
 		<fastjson.version>1.2.34</fastjson.version>
@@ -96,7 +97,6 @@
 		<guava.version>22.0</guava.version>
 		<okhttp.version>3.8.1</okhttp.version>
 		<retrofit.version>2.3.0</retrofit.version>
-		<netty.version>4.1.13</netty.version>
 		<!-- logging -->
 
 
@@ -106,13 +106,20 @@
 
 		<!-- RPC -->
 		<grpc.version>1.4.0</grpc.version><!-- deprecated use grpc starter instead -->
-		
+
 		<!-- other -->
-		<mongo-java-driver.version></mongo-java-driver.version>
+		<mongo-java-driver.version>3.4.2</mongo-java-driver.version>
 	</properties>
 
 	<dependencyManagement>
 		<dependencies>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>${spring-cloud.version}</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
 
 			<dependency>
 				<groupId>de.codecentric</groupId>
@@ -301,13 +308,46 @@
 			<dependency>
 				<groupId>org.mongodb</groupId>
 				<artifactId>mongo-java-driver</artifactId>
-				<version>3.4.2</version>
+				<version>${mongo-java-driver}</version>
 			</dependency>
 
 		</dependencies>
 	</dependencyManagement>
 	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<!-- Only needed at compile time -->
+			<scope>compile</scope>
+			<optional>true</optional>
+		</dependency>
 	</dependencies>
+	<repositories>
+	<repository>
+			<id>mvnrepository</id>
+			<name>mvnrepository</name>
+			<url>http://mvnrepository.com/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	<repository>
+			<id>centralrepository</id>
+			<name>centralrepository</name>
+			<url>http://search.maven.org/</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>spring-milestones</id>
+			<name>Spring Milestones</name>
+			<url>http://repo.spring.io/milestone</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+	</repositories>
 	<distributionManagement>
 		<repository>
 			<id>releases</id>
