@@ -283,11 +283,11 @@
 				<artifactId>okhttp</artifactId>
 				<version>${okhttp.version}</version>
 			</dependency>
-			<dependency>
+			<!--deprecated use feign instead <dependency>
 				<groupId>com.squareup.retrofit2</groupId>
 				<artifactId>retrofit</artifactId>
 				<version>${retrofit.version}</version>
-			</dependency>
+			</dependency> -->
 
 			<dependency>
 				<groupId>io.netty</groupId>
