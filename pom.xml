@@ -11,7 +11,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>org.fintx</groupId>
 	<artifactId>fintx-parent</artifactId>
-	<version>0.0.1</version>
+	<version>${parent.version}</version>
 	<packaging>pom</packaging>
 	<organization>
 		<name>FinTx</name>
@@ -41,6 +41,7 @@
 		<tag>fintx-parent</tag>
 	</scm>
 	<properties>
+		<parent.version>0.1.0.0</parent.version>
 		<java.version>1.8</java.version>
 		<!-- spring cloud -->
 		<spring-cloud.version>Finchley.M1</spring-cloud.version>
@@ -337,6 +338,14 @@
 			</releases>
 		</repository>
 		<repository>
+			<id>ossrh</id>
+			<name>Snapshot Repository</name>
+			<url>https://oss.sonatype.org/content/repositories/snapshots</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
 			<id>spring-snapshots</id>
 			<url>http://repo.spring.io/snapshot</url>
 			<snapshots>
@@ -443,6 +452,7 @@
 				</repository>
 			</distributionManagement>
 			<build>
+				<!--finalName>${project.artifactId}</finalName -->
 				<plugins>
 					<plugin>
 						<groupId>org.sonatype.plugins</groupId>
@@ -454,6 +464,19 @@
 							<nexusUrl>https://oss.sonatype.org/</nexusUrl>
 							<autoReleaseAfterClose>true</autoReleaseAfterClose>
 						</configuration>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-gpg-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>sign-artifacts</id>
+								<phase>verify</phase>
+								<goals>
+									<goal>sign</goal>
+								</goals>
+							</execution>
+						</executions>
 					</plugin>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
@@ -486,13 +509,42 @@
 			</activation>
 		</profile>
 		<profile>
-			<id>snapshots</id>
+			<id>snapshot</id>
 			<distributionManagement>
 				<snapshotRepository>
 					<id>ossrh</id>
 					<url>https://oss.sonatype.org/content/repositories/snapshots</url>
 				</snapshotRepository>
 			</distributionManagement>
+			<build>
+				<!-- finalName>${project.artifactId}-SNAPSHOT</finalName -->
+				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-source-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>attach-sources</id>
+								<goals>
+									<goal>jar-no-fork</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-javadoc-plugin</artifactId>
+						<executions>
+							<execution>
+								<id>attach-javadocs</id>
+								<goals>
+									<goal>jar</goal>
+								</goals>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
 			<activation>
 				<activeByDefault>true</activeByDefault>
 			</activation>
