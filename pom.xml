@@ -15,7 +15,7 @@
 	<packaging>pom</packaging>
 	<organization>
 		<name>FinTx</name>
-		<url>http://www.fintx.org</url>
+		<url>www.fintx.org</url>
 	</organization>
 	<licenses>
 		<license>
@@ -29,13 +29,17 @@
 			<name>Qiang Wang</name>
 			<email>qiang.x.wang at gmail.com</email>
 			<organization>FinTx</organization>
-			<organizationUrl>http://www.fintx.org</organizationUrl>
+			<organizationUrl>www.fintx.org</organizationUrl>
 			<roles>
 				<role>Project lead</role>
 			</roles>
 		</developer>
 	</developers>
-
+	<scm>
+		<url>https://github.com/fintx/fintx-parent</url>
+		<connection>https://github.com/fintx/fintx-parent.git</connection>
+		<tag>fintx-parent</tag>
+	</scm>
 	<properties>
 		<java.version>1.8</java.version>
 		<!-- spring cloud -->
