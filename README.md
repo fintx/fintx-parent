@@ -14,5 +14,16 @@ FinTx is an open source group focus on financial technologies.
 
 fintx-parent is parent maven[2] project for all fintx projects.
 
+## Using
+This is something that you get for free just by adding the following dependency inside your project:
+
+```xml
+<dependency>
+    <groupId>org.fintx</groupId>
+    <artifactId>fintx-parent</artifactId>
+    <version>${latest.version></version>
+</dependency>
+```
+
 [1] FinTx https://www.fintx.org/
 [2] Maven https://maven.apache.org/
