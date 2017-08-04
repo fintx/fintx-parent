@@ -41,7 +41,7 @@
 		<tag>fintx-parent</tag>
 	</scm>
 	<properties>
-		<parent.version>0.1.0.0</parent.version>
+		<parent.version>0.2.0.0-SNAPSHOT</parent.version>
 		<java.version>1.8</java.version>
 		<!-- spring cloud -->
 		<spring-cloud.version>Finchley.M1</spring-cloud.version>
@@ -114,6 +114,9 @@
 
 		<!-- RPC -->
 		<grpc.version>1.4.0</grpc.version><!-- deprecated use grpc starter instead -->
+		
+		<!-- API -->
+		<springfox.version>2.7.0</springfox.version>
 
 	</properties>
 
@@ -312,6 +315,17 @@
 				<groupId>io.grpc</groupId>
 				<artifactId>grpc-all</artifactId>
 				<version>${grpc.version}</version>
+			</dependency>
+			
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger2</artifactId>
+				<version>${springfox.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.springfox</groupId>
+				<artifactId>springfox-swagger-ui</artifactId>
+				<version>${springfox.version}</version>
 			</dependency>
 
 		</dependencies>
