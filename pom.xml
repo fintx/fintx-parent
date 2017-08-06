@@ -114,7 +114,7 @@
 
 		<!-- RPC -->
 		<grpc.version>1.4.0</grpc.version><!-- deprecated use grpc starter instead -->
-		
+
 		<!-- API -->
 		<springfox.version>2.7.0</springfox.version>
 
@@ -296,6 +296,11 @@
 				<artifactId>okhttp</artifactId>
 				<version>${okhttp.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>com.squareup.okhttp3</groupId>
+				<artifactId>logging-interceptor</artifactId>
+				<version>${okhttp.version}</version>
+			</dependency>
 			<!--deprecated use feign instead <dependency> <groupId>com.squareup.retrofit2</groupId> 
 				<artifactId>retrofit</artifactId> <version>${retrofit.version}</version> 
 				</dependency> -->
@@ -316,8 +321,8 @@
 				<artifactId>grpc-all</artifactId>
 				<version>${grpc.version}</version>
 			</dependency>
-			
-			
+
+
 			<dependency>
 				<groupId>io.springfox</groupId>
 				<artifactId>springfox-swagger2</artifactId>
@@ -338,6 +343,12 @@
 			<!-- Only needed at compile time -->
 			<scope>compile</scope>
 			<optional>false</optional>
+		</dependency>
+		<dependency>
+			<groupId>com.google.code.findbugs</groupId>
+			<artifactId>jsr305</artifactId>
+			<version>3.0.2</version>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 	<repositories>
