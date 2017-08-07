@@ -433,11 +433,10 @@
 			</resource>
 		</resources>
 		<plugins>
-			<!-- build> <plugins> <plugin> <groupId>org.springframework.boot</groupId> 
+			<!--if the parent is pring-boot-starter-parent this plugin is not required <plugin> <groupId>org.springframework.boot</groupId> 
 				<artifactId>spring-boot-maven-plugin</artifactId> <dependencies> <dependency> 
 				<groupId>org.springframework</groupId> <artifactId>springloaded</artifactId> 
-				<version>1.2.7.RELEASE</version> </dependency> </dependencies> </plugin> 
-				</plugins> </build -->
+				<version>1.2.7.RELEASE</version> </dependency> </dependencies> </plugin-->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
