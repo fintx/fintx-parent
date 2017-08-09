@@ -41,7 +41,7 @@
 		<tag>fintx-parent</tag>
 	</scm>
 	<properties>
-		<parent.version>0.2.0.0-SNAPSHOT</parent.version>
+		<parent.version>0.2.0.0</parent.version>
 		<java.version>1.8</java.version>
 		<!-- spring cloud -->
 		<spring-cloud.version>Finchley.M1</spring-cloud.version>
@@ -433,10 +433,10 @@
 			</resource>
 		</resources>
 		<plugins>
-			<!--if the parent is pring-boot-starter-parent this plugin is not required <plugin> <groupId>org.springframework.boot</groupId> 
-				<artifactId>spring-boot-maven-plugin</artifactId> <dependencies> <dependency> 
-				<groupId>org.springframework</groupId> <artifactId>springloaded</artifactId> 
-				<version>1.2.7.RELEASE</version> </dependency> </dependencies> </plugin-->
+			<!--if the parent is pring-boot-starter-parent this plugin is not required 
+				<plugin> <groupId>org.springframework.boot</groupId> <artifactId>spring-boot-maven-plugin</artifactId> 
+				<dependencies> <dependency> <groupId>org.springframework</groupId> <artifactId>springloaded</artifactId> 
+				<version>1.2.7.RELEASE</version> </dependency> </dependencies> </plugin -->
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
@@ -458,6 +458,18 @@
 						<nonFilteredFileExtension>pfx</nonFilteredFileExtension>
 						<nonFilteredFileExtension>p12</nonFilteredFileExtension>
 					</nonFilteredFileExtensions>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.codehaus.mojo</groupId>
+				<artifactId>cobertura-maven-plugin</artifactId>
+				<version>2.7</version>
+				<configuration>
+					<formats>
+						<format>html</format>
+						<format>xml</format>
+					</formats>
+					<check />
 				</configuration>
 			</plugin>
 		</plugins>
