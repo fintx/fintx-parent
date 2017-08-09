@@ -3,6 +3,9 @@
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.fintx/fintx-parent/badge.svg?style=flat-square)](https://maven-badges.herokuapp.com/maven-central/org.fintx/fintx-parent/)
 [![GitHub release](https://img.shields.io/github/release/fintx/fintx-parent.svg)](https://github.com/fintx/fintx-parent/releases)
 ![Apache 2](http://img.shields.io/badge/license-Apache%202-red.svg)
+[![Join the chat at https://gitter.im/fintx/fintx-parent](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/fintx/fintx-parent?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+[![Build Status](https://travis-ci.org/fintx/fintx-parent.svg?branch=master)](https://travis-ci.org/fintx/fintx-parent)
+[![codecov.io](https://codecov.io/github/fintx/fintx-parent/coverage.svg?branch=master)](https://codecov.io/github/fintx/fintx-parent?branch=master)
 
 # FinTx[1]
 
