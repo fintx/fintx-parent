@@ -49,10 +49,10 @@
 		<spring-cloud-starter-kubernetes.version>0.1.6</spring-cloud-starter-kubernetes.version>
 
 		<!-- spring boot -->
-		<spring-boot-admin.version>1.5.2</spring-boot-admin.version>
+		<spring-boot-admin.version>1.5.3</spring-boot-admin.version>
 		<grpc-spring-boot-starter.version>2.0.4</grpc-spring-boot-starter.version>
 		<mybatis-spring-boot-starter.version>1.3.0</mybatis-spring-boot-starter.version>
-		<pagehelper-spring-boot-starter.version>1.1.2</pagehelper-spring-boot-starter.version>
+		<pagehelper-spring-boot-starter.version>1.1.3</pagehelper-spring-boot-starter.version>
 		<!-- no starter for hbase(hadoop)? -->
 
 
@@ -65,32 +65,32 @@
 
 
 		<!-- aop -->
-		<cglib.version>3.2.4</cglib.version>
+		<cglib.version>3.2.5</cglib.version>
 
 		<!-- mybatis -->
-		<mybatis.version>3.4.1</mybatis.version>
-		<mybatis-spring.version>1.3.0</mybatis-spring.version>
-		<pagehelper.version>4.1.6</pagehelper.version>
+		<mybatis.version>3.4.4</mybatis.version>
+		<mybatis-spring.version>1.3.1</mybatis-spring.version>
+		<pagehelper.version>5.0.4</pagehelper.version>
 		<mybatis-generator.version>1.3.5</mybatis-generator.version>
 
 
 		<!-- security -->
 		<shiro.version>1.4.0</shiro.version>
 		<esapi.version>2.1.0.1</esapi.version>
-		<antisamy.version>1.5.5</antisamy.version>
+		<antisamy.version>1.5.6</antisamy.version>
 
 		<!-- j2ee -->
 
 
 		<!-- connection pool -->
 		<!--deprecated <c3p0.version>0.9.1.2</c3p0.version> -->
-		<druid.version>1.1.0</druid.version>
+		<druid.version>1.1.2</druid.version>
 
 		<!-- scheduler -->
 		<!-- quartz.version>2.3.0</quartz.version> -->
 
 		<!-- Json operation -->
-		<fastjson.version>1.2.34</fastjson.version>
+		<fastjson.version>1.2.35</fastjson.version>
 
 
 		<!-- document operation -->
@@ -102,18 +102,20 @@
 		<commons-net.version>3.6</commons-net.version>
 		<commons-fileupload.version>1.3.3</commons-fileupload.version>
 		<commons-lang.version>3.6</commons-lang.version>
-		<guava.version>22.0</guava.version>
+		<guava.version>23.0</guava.version>
 		<okhttp.version>3.8.1</okhttp.version>
 		<retrofit.version>2.3.0</retrofit.version>
 		<!-- logging -->
 
+		<!-- netwrok -->
+		<netty.version>4.1.14.Final</netty.version>
 
 		<!-- serialization -->
 		<protobuf.version>3.3.1</protobuf.version><!-- deprecated use grpc starter 
 			instead -->
 
 		<!-- RPC -->
-		<grpc.version>1.4.0</grpc.version><!-- deprecated use grpc starter instead -->
+		<grpc.version>1.5.0</grpc.version><!-- deprecated use grpc starter instead -->
 
 		<!-- API -->
 		<springfox.version>2.7.0</springfox.version>
