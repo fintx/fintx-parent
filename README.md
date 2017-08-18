@@ -29,5 +29,5 @@ This is something that you get for free just by adding the following dependency 
 </dependency>
 ```
 
-[1] FinTx https://www.fintx.org/
+[1] FinTx https://www.fintx.org/    
 [2] Maven https://maven.apache.org/
