@@ -51,7 +51,7 @@
 		<coveralls.project.token>r6qf0I6UOQMp6kPQaJfWQdnFKXsW1b0yl</coveralls.project.token>
 
 		<!-- spring cloud -->
-		<spring-cloud.version>Finchley.M1</spring-cloud.version>
+		<spring-cloud.version>Finchley.M2</spring-cloud.version>
 
 		<spring-cloud-starter-kubernetes.version>0.1.6</spring-cloud-starter-kubernetes.version>
 
