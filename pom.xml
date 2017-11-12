@@ -41,6 +41,7 @@
 		<tag>fintx-parent</tag>
 	</scm>
 	<properties>
+
 		<parent.version>0.4.0.0-SNAPSHOT</parent.version>
 		<java.version>1.8</java.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -48,94 +49,93 @@
 		<maven.compiler.source>${java.version}</maven.compiler.source>
 		<maven.compiler.target>${java.version}</maven.compiler.target>
 
+		<!-- coveralls -->
 		<coveralls.project.token>r6qf0I6UOQMp6kPQaJfWQdnFKXsW1b0yl</coveralls.project.token>
 
-		<!-- spring cloud -->
+		<!-- application cloud -->
 		<spring-cloud.version>Finchley.M2</spring-cloud.version>
 
-		<spring-cloud-starter-kubernetes.version>0.1.6</spring-cloud-starter-kubernetes.version>
+		<!-- application cloud and infrastructure cloud integration -->
+		<spring-cloud-starter-kubernetes.version>0.2.0.RELEASE</spring-cloud-starter-kubernetes.version>
 
-		<!-- spring boot -->
+		<!-- application cloud monitor -->
 		<spring-boot-admin.version>1.5.4</spring-boot-admin.version>
-		<grpc-spring-boot-starter.version>2.0.5</grpc-spring-boot-starter.version>
-		<mybatis-spring-boot-starter.version>1.3.1</mybatis-spring-boot-starter.version>
-		<pagehelper-spring-boot-starter.version>1.2.1</pagehelper-spring-boot-starter.version>
-		<!-- no starter for hbase(hadoop)? -->
-
-
-
-		<!-- spring -->
-		<!--<spring-data-commons.version>2.0.0.M2</spring-data-commons.version> 
-			<spring-data-redis.version>2.0.0.M2</spring-data-redis.version> <spring-data-mongodb.version>2.0.0.M2</spring-data-mongodb.version> 
-			<spring-data-neo4j.version>2.0.0.M2</spring-data-neo4j.version> <spring-data-cassandra.version>2.0.0.M2</spring-data-cassandra.version> -->
-		<spring-data-hadoop.version>2.5.0.RELEASE</spring-data-hadoop.version>
-
-
-		<!-- aop -->
-		<cglib.version>3.2.5</cglib.version>
-
-		<!-- mybatis -->
-		<mybatis.version>3.4.5</mybatis.version>
-		<mybatis-spring.version>1.3.1</mybatis-spring.version>
-		<pagehelper.version>5.1.1</pagehelper.version>
-		<mybatis-generator.version>1.3.5</mybatis-generator.version>
-
 
 		<!-- security -->
 		<shiro.version>1.4.0</shiro.version>
 		<esapi.version>2.1.0.1</esapi.version>
 		<antisamy.version>1.5.6</antisamy.version>
 
-		<!-- j2ee -->
-		<!-- JAXB -->
-		<jaxb-api.version>2.3.0</jaxb-api.version>
-		<jaxb-runtime.version>2.3.0</jaxb-runtime.version>
-
+		<!-- ORM -->
+		<mybatis-spring-boot-starter.version>1.3.1</mybatis-spring-boot-starter.version>
+		<pagehelper-spring-boot-starter.version>1.2.1</pagehelper-spring-boot-starter.version>
+		<mybatis-generator.version>1.3.5</mybatis-generator.version>
 		<!-- connection pool -->
 		<!--deprecated <c3p0.version>0.9.1.2</c3p0.version> -->
 		<druid.version>1.1.3</druid.version>
 
-		<!-- scheduler -->
+		<!-- NoSQL -->
+		<!--<spring-data-commons.version>2.0.0.M2</spring-data-commons.version> 
+			<spring-data-redis.version>2.0.0.M2</spring-data-redis.version> <spring-data-mongodb.version>2.0.0.M2</spring-data-mongodb.version> 
+			<spring-data-neo4j.version>2.0.0.M2</spring-data-neo4j.version> <spring-data-cassandra.version>2.0.0.M2</spring-data-cassandra.version> -->
+		<spring-data-hadoop.version>2.5.0.RELEASE</spring-data-hadoop.version>
+		<!--hbase was included in spring-data-hadoop -->
+
+		<!-- RPC -->
+		<!-- protobuf.version>3.4.0</protobuf.version -->
+		<!--grpc.version>1.6.1</grpc.version -->
+		<grpc-spring-boot-starter.version>2.1.3</grpc-spring-boot-starter.version>
+
+		<!-- schedule -->
 		<quartz.version>2.3.0</quartz.version>
 
-		<!-- Json operation -->
-		<fastjson.version>1.2.38</fastjson.version>
+		<!-- aop -->
+		<cglib.version>3.2.5</cglib.version>
 
-
-
-		<!-- document operation -->
+		<!-- document -->
 		<poi.version>3.16</poi.version>
 		<itextpdf.version>5.5.12</itextpdf.version>
 
-		<!-- util -->
+		<!-- JSON -->
+		<fastjson.version>1.2.38</fastjson.version>
 
+		<!-- XML -->
+		<jaxb-api.version>2.3.0</jaxb-api.version>
+		<jaxb-runtime.version>2.3.0</jaxb-runtime.version>
+
+		<!-- util -->
 		<commons-net.version>3.6</commons-net.version>
 		<commons-fileupload.version>1.3.3</commons-fileupload.version>
 		<commons-lang.version>3.6</commons-lang.version>
 		<guava.version>23.0</guava.version>
+
+		<!-- HTTP client -->
 		<okhttp.version>3.9.0</okhttp.version>
-		<retrofit.version>2.3.0</retrofit.version>
-		<!-- logging -->
+
+		<!-- HTTP API invoke -->
+		<!-- retrofit.version>2.3.0</retrofit.version -->
+		<!-- feign was included in spring-cloud-dependencies -->
+		<!-- spring-cloud-starter-openfeign.version>2.0.0.M3</spring-cloud-starter-openfeign.version -->
 
 		<!-- netwrok -->
 		<netty.version>4.1.15.Final</netty.version>
 
-		<!-- serialization -->
-		<protobuf.version>3.4.0</protobuf.version><!-- deprecated use grpc starter 
-			instead -->
+		<!-- logging -->
+		<!-- use log4j2 -->
 
-		<!-- RPC -->
-		<grpc.version>1.6.1</grpc.version><!-- deprecated use grpc starter instead -->
-
-		<!-- API -->
+		<!--JSON API specification -->
 		<springfox.version>2.7.0</springfox.version>
-		
+		<swagger-core.version>2.0.0-rc2</swagger-core.version>
+
+		<!--Hot Deployment -->
 		<spring-boot-devtools.version>2.0.0.M6</spring-boot-devtools.version>
 
 	</properties>
 
 	<dependencyManagement>
 		<dependencies>
+
+			<!-- for application cloud -->
 			<dependency>
 				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-dependencies</artifactId>
@@ -143,12 +143,15 @@
 				<type>pom</type>
 				<scope>import</scope>
 			</dependency>
+
+			<!-- for application cloud and infrastructure cloud integration -->
 			<dependency>
-				<groupId>io.fabric8</groupId>
+				<groupId>org.springframework.cloud</groupId>
 				<artifactId>spring-cloud-starter-kubernetes</artifactId>
 				<version>${spring-cloud-starter-kubernetes.version}</version>
 			</dependency>
 
+			<!-- for application cloud monitor -->
 			<dependency>
 				<groupId>de.codecentric</groupId>
 				<artifactId>spring-boot-admin-server</artifactId>
@@ -164,60 +167,8 @@
 				<artifactId>spring-boot-admin-starter-client</artifactId>
 				<version>${spring-boot-admin.version}</version>
 			</dependency>
-			<dependency>
-				<groupId>org.mybatis.spring.boot</groupId>
-				<artifactId>mybatis-spring-boot-starter</artifactId>
-				<version>${mybatis-spring-boot-starter.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.github.pagehelper</groupId>
-				<artifactId>pagehelper-spring-boot-starter</artifactId>
-				<version>${pagehelper-spring-boot-starter.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.lognet</groupId>
-				<artifactId>grpc-spring-boot-starter</artifactId>
-				<version>${grpc-spring-boot-starter.version}</version>
-				<!-- type>pom</type> -->
-			</dependency>
 
-
-			<dependency>
-				<groupId>org.springframework.data</groupId>
-				<artifactId>spring-data-hadoop</artifactId>
-				<version>${spring-data-hadoop.version}</version>
-			</dependency>
-
-
-
-			<dependency>
-				<groupId>cglib</groupId>
-				<artifactId>cglib</artifactId>
-				<version>${cglib.version}</version>
-			</dependency>
-
-
-
-			<dependency>
-				<groupId>org.mybatis</groupId>
-				<artifactId>mybatis</artifactId>
-				<version>${mybatis.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.mybatis</groupId>
-				<artifactId>mybatis-spring</artifactId>
-				<version>${mybatis-spring.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>com.github.pagehelper</groupId>
-				<artifactId>pagehelper</artifactId>
-				<version>${pagehelper.version}</version>
-			</dependency>
-			<dependency>
-				<groupId>org.mybatis.generator</groupId>
-				<artifactId>mybatis-generator-core</artifactId>
-				<version>${mybatis-generator.version}</version>
-			</dependency>
+			<!-- for security -->
 			<dependency>
 				<groupId>org.apache.shiro</groupId>
 				<artifactId>shiro-all</artifactId>
@@ -235,14 +186,49 @@
 				<version>${antisamy.version}</version>
 			</dependency>
 
-
+			<!-- for ORM -->
+			<dependency>
+				<groupId>org.mybatis.spring.boot</groupId>
+				<artifactId>mybatis-spring-boot-starter</artifactId>
+				<version>${mybatis-spring-boot-starter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>com.github.pagehelper</groupId>
+				<artifactId>pagehelper-spring-boot-starter</artifactId>
+				<version>${pagehelper-spring-boot-starter.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.mybatis.generator</groupId>
+				<artifactId>mybatis-generator-core</artifactId>
+				<version>${mybatis-generator.version}</version>
+			</dependency>
+			<!-- for DB connection pool -->
 			<dependency>
 				<groupId>com.alibaba</groupId>
 				<artifactId>druid</artifactId>
 				<version>${druid.version}</version>
 			</dependency>
 
+			<!-- for NoSQL -->
+			<dependency>
+				<groupId>org.springframework.data</groupId>
+				<artifactId>spring-data-hadoop</artifactId>
+				<version>${spring-data-hadoop.version}</version>
+			</dependency>
 
+			<!-- for RPC -->
+			<!--dependency> <groupId>com.google.protobuf</groupId> <artifactId>protobuf-java</artifactId> 
+				<version>${protobuf.version}</version> </dependency -->
+			<!--dependency> <groupId>io.grpc</groupId> <artifactId>grpc-all</artifactId> 
+				<version>${grpc.version}</version> </dependency -->
+			<dependency>
+				<groupId>org.lognet</groupId>
+				<artifactId>grpc-spring-boot-starter</artifactId>
+				<version>${grpc-spring-boot-starter.version}</version>
+				<!-- type>pom</type> -->
+			</dependency>
+
+			<!-- for schedule -->
 			<dependency>
 				<groupId>org.quartz-scheduler</groupId>
 				<artifactId>quartz</artifactId>
@@ -254,7 +240,14 @@
 				<version>${quartz.version}</version>
 			</dependency>
 
+			<!-- for AOP -->
+			<dependency>
+				<groupId>cglib</groupId>
+				<artifactId>cglib</artifactId>
+				<version>${cglib.version}</version>
+			</dependency>
 
+			<!-- for document -->
 			<dependency>
 				<groupId>org.apache.poi</groupId>
 				<artifactId>poi</artifactId>
@@ -271,13 +264,14 @@
 				<version>${itextpdf.version}</version>
 			</dependency>
 
-
+			<!-- for JSON -->
 			<dependency>
 				<groupId>com.alibaba</groupId>
 				<artifactId>fastjson</artifactId>
 				<version>${fastjson.version}</version>
 			</dependency>
 
+			<!-- for XML -->
 			<dependency>
 				<groupId>javax.xml.bind</groupId>
 				<artifactId>jaxb-api</artifactId>
@@ -289,6 +283,7 @@
 				<version>${jaxb-runtime.version}</version>
 			</dependency>
 
+			<!-- for utils -->
 			<dependency>
 				<groupId>commons-net</groupId>
 				<artifactId>commons-net</artifactId>
@@ -304,12 +299,13 @@
 				<artifactId>commons-lang3</artifactId>
 				<version>${commons-lang.version}</version>
 			</dependency>
-
 			<dependency>
 				<groupId>com.google.guava</groupId>
 				<artifactId>guava</artifactId>
 				<version>${guava.version}</version>
 			</dependency>
+
+			<!-- for HTTP -->
 			<dependency>
 				<groupId>com.squareup.okhttp3</groupId>
 				<artifactId>okhttp</artifactId>
@@ -320,28 +316,28 @@
 				<artifactId>logging-interceptor</artifactId>
 				<version>${okhttp.version}</version>
 			</dependency>
-			<!--deprecated use feign instead <dependency> <groupId>com.squareup.retrofit2</groupId> 
-				<artifactId>retrofit</artifactId> <version>${retrofit.version}</version> 
-				</dependency> -->
 
+			<!-- for HTTP API invoke -->
+			<!--deprecated use feign instead -->
+			<!--dependency> <groupId>com.squareup.retrofit2</groupId> <artifactId>retrofit</artifactId> 
+				<version>${retrofit.version}</version> </dependency> -->
+			<!-- feign was included in spring-cloud-dependencies -->
+			<!--dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-openfeign</artifactId>
+				<version>${spring-cloud-starter-openfeign.version}</version>
+			</dependency  -->
+
+			<!-- for network -->
 			<dependency>
 				<groupId>io.netty</groupId>
 				<artifactId>netty-all</artifactId>
 				<version>${netty.version}</version>
 			</dependency>
-			<dependency>
-				<groupId>com.google.protobuf</groupId>
-				<artifactId>protobuf-java</artifactId>
-				<version>${protobuf.version}</version>
-			</dependency>
 
-			<dependency>
-				<groupId>io.grpc</groupId>
-				<artifactId>grpc-all</artifactId>
-				<version>${grpc.version}</version>
-			</dependency>
+			<!-- for logging -->
 
-
+			<!--for JSON API specification -->
 			<dependency>
 				<groupId>io.springfox</groupId>
 				<artifactId>springfox-swagger2</artifactId>
@@ -352,14 +348,18 @@
 				<artifactId>springfox-swagger-ui</artifactId>
 				<version>${springfox.version}</version>
 			</dependency>
-			
+			<dependency>
+				<groupId>io.swagger</groupId>
+				<artifactId>swagger-core</artifactId>
+				<version>${swagger-core.version}</version>
+			</dependency>
+
+			<!-- hot deployment -->
 			<!-- spring boot devtools 依赖包. -->
 			<dependency>
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-devtools</artifactId>
 				<version>${spring-boot-devtools.version}</version>
-				<optional>true</optional>
-				<scope>true</scope>
 			</dependency>
 
 		</dependencies>
