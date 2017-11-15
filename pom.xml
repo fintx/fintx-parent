@@ -37,7 +37,7 @@
 	</developers>
 	<scm>
 		<url>https://github.com/fintx/fintx-parent</url>
-		<connection>https://github.com/fintx/fintx-parent.git</connection>
+		<connection>scm:https://github.com/fintx/fintx-parent.git</connection>
 		<tag>fintx-parent</tag>
 	</scm>
 	<properties>
