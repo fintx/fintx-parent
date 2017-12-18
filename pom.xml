@@ -73,7 +73,7 @@
 		<!-- connection pool -->
 		<!--deprecated <c3p0.version>0.9.1.2</c3p0.version> -->
 		<druid.version>1.1.5</druid.version>
-		
+
 		<!-- sharding -->
 		<sharding-jdbc.version>2.0.0</sharding-jdbc.version>
 
@@ -144,6 +144,8 @@
 		<!--JSON API specification -->
 		<springfox.version>2.7.0</springfox.version>
 		<swagger-core.version>2.0.0-rc2</swagger-core.version>
+
+
 
 		<!--Hot Deployment -->
 		<spring-boot-devtools.version>2.0.0.M6</spring-boot-devtools.version>
@@ -438,7 +440,14 @@
 				<artifactId>opentracing-mock</artifactId>
 				<scope>test</scope>
 			</dependency>
-
+			
+			<!-- reactive program -->
+			<!-- vert.x?? Quasar?? -->
+			<dependency>
+				<groupId>io.reactivex.rxjava2</groupId>
+				<artifactId>rxjava</artifactId>
+			</dependency>
+			
 			<!-- For findbugs -->
 			<dependency>
 				<groupId>com.google.code.findbugs</groupId>
