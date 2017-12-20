@@ -672,6 +672,8 @@
 				<version>2.17</version>
 				<configuration>
 					<configLocation>checkstyle.xml</configLocation>
+					<!-- Java source code generated -->
+                    <!-- excludes>**/com/aggregator/**/*</excludes> -->
 				</configuration>
 			</plugin>
 			<plugin>
