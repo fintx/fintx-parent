@@ -126,6 +126,7 @@
 		<commons-fileupload.version>1.3.3</commons-fileupload.version>
 		<commons-lang.version>3.6</commons-lang.version>
 		<guava.version>23.6-jre</guava.version>
+		<disruptor.version>3.3.7</disruptor.version>
 
 		<!-- HTTP client -->
 		<okhttp.version>3.9.0</okhttp.version>
@@ -373,6 +374,11 @@
 				<artifactId>guava</artifactId>
 				<version>${guava.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>com.lmax</groupId>
+				<artifactId>disruptor</artifactId>
+				<version>${disruptor.version}</version>
+			</dependency>
 
 			<!-- for HTTP -->
 			<dependency>
@@ -440,14 +446,14 @@
 				<artifactId>opentracing-mock</artifactId>
 				<scope>test</scope>
 			</dependency>
-			
+
 			<!-- reactive program -->
 			<!-- vert.x?? Quasar?? -->
 			<dependency>
 				<groupId>io.reactivex.rxjava2</groupId>
 				<artifactId>rxjava</artifactId>
 			</dependency>
-			
+
 			<!-- For findbugs -->
 			<dependency>
 				<groupId>com.google.code.findbugs</groupId>
@@ -673,7 +679,7 @@
 				<configuration>
 					<configLocation>checkstyle.xml</configLocation>
 					<!-- Java source code generated -->
-                    <!-- excludes>**/com/aggregator/**/*</excludes> -->
+					<!-- excludes>**/com/aggregator/**/*</excludes> -->
 				</configuration>
 			</plugin>
 			<plugin>
