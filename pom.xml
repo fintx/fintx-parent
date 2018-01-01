@@ -53,7 +53,7 @@
 		<coveralls.project.token>r6qf0I6UOQMp6kPQaJfWQdnFKXsW1b0yl</coveralls.project.token>
 
 		<!-- application cloud -->
-		<spring-cloud.version>Finchley.M4</spring-cloud.version>
+		<spring-cloud.version>Finchley.M5</spring-cloud.version>
 
 		<!-- application cloud and infrastructure cloud integration -->
 		<spring-cloud-starter-kubernetes.version>0.2.0.RELEASE</spring-cloud-starter-kubernetes.version>
@@ -147,7 +147,9 @@
 		<springfox.version>2.7.0</springfox.version>
 		<swagger-core.version>2.0.0-rc2</swagger-core.version>
 
-
+		<!-- Reactive -->
+		<!-- defined in parent -->
+		<!-- rxjava.version></rxjava.version> -->
 		<quasar.version>0.7.9</quasar.version>
 
 
@@ -157,6 +159,7 @@
 		<!-- Tracing -->
 		<opentracing.version>0.30.0</opentracing.version>
 
+		<!-- Findbugs -->
 		<jsr305.version>3.0.2</jsr305.version>
 
 
@@ -465,10 +468,11 @@
 			</dependency>
 
 			<!-- reactive program -->
-			<!-- vert.x?? Quasar?? -->
+			<!-- vert.x?? -->
 			<dependency>
 				<groupId>io.reactivex.rxjava2</groupId>
 				<artifactId>rxjava</artifactId>
+				<version>${rxjava2.version}</version>
 			</dependency>
 			<dependency>
 				<groupId>co.paralleluniverse</groupId>
