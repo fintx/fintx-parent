@@ -92,6 +92,8 @@
 		<!--hbase was included in spring-data-hadoop -->
 		<spring-data-hadoop.version>2.5.0.RELEASE</spring-data-hadoop.version>
 
+		<!-- Stream compute -->
+		<storm.version>1.1.1</storm.version>
 
 		<!-- RPC -->
 		<!-- protobuf.version>3.4.0</protobuf.version -->
@@ -277,6 +279,25 @@
 				<groupId>org.springframework.data</groupId>
 				<artifactId>spring-data-hadoop</artifactId>
 				<version>${spring-data-hadoop.version}</version>
+			</dependency>
+
+
+			<!-- for Stream compute -->
+			<dependency>
+				<groupId>org.apache.storm</groupId>
+				<artifactId>storm-core</artifactId>
+				<version>${storm.version}</version>
+				<scope>provided</scope>
+				<exclusions>
+					<exclusion>
+						<groupId>org.apache.logging.log4j</groupId>
+						<artifactId>log4j-slf4j-impl</artifactId>
+					</exclusion>
+					<exclusion>
+						<artifactId>servlet-api</artifactId>
+						<groupId>javax.servlet</groupId>
+					</exclusion>
+				</exclusions>
 			</dependency>
 
 			<!-- for RPC -->
