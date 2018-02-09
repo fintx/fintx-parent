@@ -155,8 +155,8 @@
 		<!-- use log4j2 -->
 
 		<!--JSON API specification -->
-		<springfox.version>2.7.0</springfox.version>
-		<swagger-core.version>2.0.0-rc2</swagger-core.version>
+		<springfox.version>2.8.0</springfox.version>
+		<swagger.version>2.0.0-rc2</swagger.version>
 
 		<!-- Reactive -->
 		<!-- defined in parent -->
@@ -499,8 +499,18 @@
 			</dependency>
 			<dependency>
 				<groupId>io.swagger</groupId>
+				<artifactId>swagger-annotations</artifactId>
+				<version>${swagge.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.swagger</groupId>
 				<artifactId>swagger-core</artifactId>
-				<version>${swagger-core.version}</version>
+				<version>${swagger.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>io.swagger</groupId>
+				<artifactId>swagger-models</artifactId>
+				<version>${swagger.version}</version>
 			</dependency>
 
 			<!-- hot deployment -->
