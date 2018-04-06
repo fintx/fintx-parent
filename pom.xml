@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.0.RELEASE</version>
+		<version>2.0.1.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
@@ -52,7 +52,7 @@
 		<coveralls.project.token>r6qf0I6UOQMp6kPQaJfWQdnFKXsW1b0yl</coveralls.project.token>
 
 		<!-- application cloud -->
-		<spring-cloud.version>Finchley.M8</spring-cloud.version>
+		<spring-cloud.version>Finchley.M9</spring-cloud.version>
 
 		<!-- application cloud and infrastructure cloud integration -->
 		<spring-cloud-starter-kubernetes.version>0.2.0.RELEASE</spring-cloud-starter-kubernetes.version>
@@ -281,12 +281,13 @@
 			</dependency>
 
 			<!-- for NoSQL -->
+			<!-- spring data hadoop will end-of-life on April 5th, 2019. https://github.com/spring-cloud-stream-app-starters/hdfs will rely on this project-->
 			<dependency>
 				<groupId>org.springframework.data</groupId>
 				<artifactId>spring-data-hadoop</artifactId>
 				<version>${spring-data-hadoop.version}</version>
 			</dependency>
-
+			
 
 			<!-- for Stream compute -->
 			<dependency>
