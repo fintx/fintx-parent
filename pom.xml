@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.1.RELEASE</version>
+		<version>2.0.2.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
@@ -99,7 +99,7 @@
 		<!-- RPC -->
 		<!-- protobuf.version>3.4.0</protobuf.version -->
 		<!--grpc.version>1.6.1</grpc.version -->
-		<grpc-spring-boot-starter.version>2.1.5</grpc-spring-boot-starter.version>
+		<grpc-spring-boot-starter.version>2.3.2</grpc-spring-boot-starter.version>
 
 		<!-- schedule -->
 		<quartz.version>2.3.0</quartz.version>
