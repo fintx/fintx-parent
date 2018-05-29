@@ -281,13 +281,14 @@
 			</dependency>
 
 			<!-- for NoSQL -->
-			<!-- spring data hadoop will end-of-life on April 5th, 2019. https://github.com/spring-cloud-stream-app-starters/hdfs will rely on this project-->
+			<!-- spring data hadoop will end-of-life on April 5th, 2019. https://github.com/spring-cloud-stream-app-starters/hdfs 
+				will rely on this project -->
 			<dependency>
 				<groupId>org.springframework.data</groupId>
 				<artifactId>spring-data-hadoop</artifactId>
 				<version>${spring-data-hadoop.version}</version>
 			</dependency>
-			
+
 
 			<!-- for Stream compute -->
 			<dependency>
@@ -769,6 +770,87 @@
 						</goals>
 					</execution>
 				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-enforcer-plugin</artifactId>
+				<!-- version>3.0.0-M1</version> -->
+				<dependencies>
+					<dependency>
+						<groupId>org.codehaus.mojo</groupId>
+						<artifactId>extra-enforcer-rules</artifactId>
+						<version>1.0-beta-7</version>
+					</dependency>
+				</dependencies>
+				<executions>
+					<execution>
+						<id>enforce-check</id>
+						<phase>package</phase>
+						<goals>
+							<goal>enforce</goal>
+						</goals>
+					</execution>
+				</executions>
+				<configuration>
+					<failFast>true</failFast>
+					<rules>
+						<requireMavenVersion>
+							<version>[3.0.3,)</version>
+						</requireMavenVersion>
+						<requireJavaVersion>
+							<version>1.8</version>
+						</requireJavaVersion>
+						<bannedDependencies>
+							<searchTransitive>true</searchTransitive>
+							<excludes>
+								<exclude>junit:junit</exclude>
+								<exclude>commons-logging:commons-logging</exclude>
+								<exclude>log4j:log4j</exclude>
+								<exclude>org.slf4j:slf4j-log4j12</exclude>
+								<exclude>org.slf4j:slf4j-log4j13</exclude>
+								<exclude>org.springframework:*:[,5.0.0.RELEASE]:jar</exclude>
+								<exclude>commons-beanutils:commons-beanutils:[,1.8.3]:jar</exclude>
+							</excludes>
+							<includes>
+								<include>junit:junit:*:jar:test</include>
+								<include>org.apache.logging.log4j:log4j-core:[2.11.0,]</include>
+								<include>org.apache.logging.log4j:log4j-slf4j-impl:[2.11.0,]</include>
+							</includes>
+							<message>must use log4j2 and spring above 5.0.0</message>
+						</bannedDependencies>
+
+						<evaluateBeanshell>
+							<condition>print("[INFO] [Enforcer Rules] ");1==1</condition>
+						</evaluateBeanshell>
+
+						<banDuplicateClasses>
+							<findAllDuplicates>true</findAllDuplicates>
+							<ignoreClasses>
+								<ignoreClass>junit.*</ignoreClass>
+								<ignoreClass>org.junit.*</ignoreClass>
+								<ignoreClass>org.hamcrest.*</ignoreClass>
+								<ignoreClass>org.w3c.dom.*</ignoreClass>
+								<ignoreClass>javax.xml.*</ignoreClass>
+								<ignoreClass>javax.annotation.*</ignoreClass>
+								<ignoreClass>javax.activation.*</ignoreClass>
+								<ignoreClass>org.aspectj.*</ignoreClass>
+								<ignoreClass>com.sun.tools.attach.*</ignoreClass>
+								<ignoreClass>com.sun.activation.*</ignoreClass>
+								<ignoreClass>com.sun.istack.*</ignoreClass>
+								<ignoreClass>sun.tools.attach.*</ignoreClass>
+								<ignoreClass>org.aopalliance.*</ignoreClass>
+								<ignoreClass>org.apache.hadoop.yarn.*</ignoreClass>
+								<ignoreClass>org.apache.commons.beanutils.*</ignoreClass>
+								<ignoreClass>org.apache.xmlbeans.xml.stream.*</ignoreClass>
+								<ignoreClass>org.xml.sax.*</ignoreClass>
+							</ignoreClasses>
+							<message>[ERROR] [Enforcer Rules] find DuplicateClasses</message>
+						</banDuplicateClasses>
+						<dependencyConvergence>
+							<uniqueVersion>false</uniqueVersion>
+						</dependencyConvergence>
+					</rules>
+				</configuration>
 			</plugin>
 		</plugins>
 	</build>
