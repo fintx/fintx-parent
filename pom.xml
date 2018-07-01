@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.2.RELEASE</version>
+		<version>2.0.3.RELEASE</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 
@@ -52,10 +52,10 @@
 		<coveralls.project.token>r6qf0I6UOQMp6kPQaJfWQdnFKXsW1b0yl</coveralls.project.token>
 
 		<!-- application cloud -->
-		<spring-cloud.version>Finchley.RC2</spring-cloud.version>
+		<spring-cloud.version>Finchley.RELEASE</spring-cloud.version>
 
 		<!-- application cloud and infrastructure cloud integration -->
-		<spring-cloud-starter-kubernetes.version>0.2.0.RELEASE</spring-cloud-starter-kubernetes.version>
+		<spring-cloud-starter-kubernetes.version>0.3.0.RC1</spring-cloud-starter-kubernetes.version>
 
 		<!-- application cloud monitor -->
 		<!-- deprecated.TODO use prometheus/infuxDB and Grafana -->
@@ -68,7 +68,7 @@
 
 		<!-- ORM -->
 		<mybatis-spring-boot-starter.version>1.3.2</mybatis-spring-boot-starter.version>
-		<pagehelper-spring-boot-starter.version>1.2.3</pagehelper-spring-boot-starter.version>
+		<pagehelper-spring-boot-starter.version>1.2.4</pagehelper-spring-boot-starter.version>
 		<mybatis-generator.version>1.3.6</mybatis-generator.version>
 		<mybatis.version>3.4.6</mybatis.version>
 
@@ -78,10 +78,10 @@
 
 		<!-- connection pool -->
 		<!--deprecated <c3p0.version>0.9.1.2</c3p0.version> -->
-		<druid.version>1.1.9</druid.version>
+		<druid.version>1.1.10</druid.version>
 
 		<!-- sharding -->
-		<sharding-jdbc.version>2.0.3</sharding-jdbc.version>
+		<sharding-jdbc.version>3.0.0.M1</sharding-jdbc.version>
 
 		<!-- NoSQL -->
 		<!--spring-data was included in spring cloud -->
@@ -92,23 +92,26 @@
 		<!--spring-data-cassandra.version>2.0.0.M2</spring-data-cassandra.version -->
 		<!--hbase was included in spring-data-hadoop -->
 		<spring-data-hadoop.version>2.5.0.RELEASE</spring-data-hadoop.version>
+		<!-- Defined in parent -->
+		<!--lettuce.version>5.1.0.M1</lettuce.version-->
+		
 
 		<!-- Stream compute -->
-		<storm.version>1.2.1</storm.version>
+		<storm.version>1.2.2</storm.version>
 
 		<!-- RPC -->
 		<!-- protobuf.version>3.4.0</protobuf.version -->
 		<!--grpc.version>1.6.1</grpc.version -->
-		<grpc-spring-boot-starter.version>2.3.2</grpc-spring-boot-starter.version>
+		<grpc-spring-boot-starter.version>2.4.0</grpc-spring-boot-starter.version>
 
 		<!-- schedule -->
 		<quartz.version>2.3.0</quartz.version>
 
 		<!-- flow -->
-		<flowable.version>6.2.1</flowable.version>
+		<flowable.version>6.3.1</flowable.version>
 
 		<!-- rule -->
-		<drools.version>7.5.0.Final</drools.version>
+		<drools.version>7.7.0.Final</drools.version>
 
 		<!-- aop -->
 		<cglib.version>3.2.6</cglib.version>
@@ -134,12 +137,12 @@
 		<commons-fileupload.version>1.3.3</commons-fileupload.version>
 		<commons-lang.version>3.7</commons-lang.version>
 		<guava.version>24.1-jre</guava.version>
-		<disruptor.version>3.4.1</disruptor.version>
-		<eclipse-collections.version>9.2.0.M1</eclipse-collections.version>
-		<chronicle-core.version>1.9.23</chronicle-core.version>
-		<chronicle-map.version>3.14.5</chronicle-map.version>
-		<chronicle-threads.version>1.9.4</chronicle-threads.version>
-		<chronicle-queue.version>4.6.60</chronicle-queue.version>
+		<disruptor.version>3.4.2</disruptor.version>
+		<eclipse-collections.version>9.2.0</eclipse-collections.version>
+		<chronicle-core.version>1.16.12</chronicle-core.version>
+		<chronicle-map.version>3.15.1</chronicle-map.version>
+		<chronicle-threads.version>1.16.3</chronicle-threads.version>
+		<chronicle-queue.version>5.16.6</chronicle-queue.version>
 
 		<!-- HTTP client -->
 		<okhttp.version>3.10.0</okhttp.version>
@@ -150,7 +153,7 @@
 		<!-- spring-cloud-starter-openfeign.version>2.0.0.M3</spring-cloud-starter-openfeign.version -->
 
 		<!-- netwrok -->
-		<netty.version>4.1.22.Final</netty.version>
+		<netty.version>4.1.25.Final</netty.version>
 
 		<!-- logging -->
 		<!-- use log4j2 -->
@@ -159,15 +162,15 @@
 		<!-- Reactive -->
 		<!-- defined in parent -->
 		<!-- rxjava.version></rxjava.version> -->
-		<quasar.version>0.7.9</quasar.version>
+		<quasar.version>0.7.10</quasar.version>
 
 
 		<!-- Tracing -->
 		<opentracing.version>0.31.0</opentracing.version>
 
 		<!--JSON API specification -->
-		<springfox.version>2.8.0</springfox.version>
-		<swagger.version>2.0.0-rc4</swagger.version>
+		<springfox.version>2.9.2</springfox.version>
+		<swagger.version>2.0.2</swagger.version>
 
 		<!--Hot Deployment -->
 		<!--spring-boot-devtools.version>2.0.0.M6</spring-boot-devtools.version -->
@@ -275,7 +278,7 @@
 
 			<!-- for sharding -->
 			<dependency>
-				<groupId>io.shardingjdbc</groupId>
+				<groupId>io.shardingsphere</groupId>
 				<artifactId>sharding-jdbc-orchestration-spring-boot-starter</artifactId>
 				<version>${sharding-jdbc.version}</version>
 			</dependency>
