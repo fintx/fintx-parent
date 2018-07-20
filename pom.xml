@@ -79,7 +79,7 @@
 		<!-- connection pool -->
 		<!--deprecated <c3p0.version>0.9.1.2</c3p0.version> -->
 		<druid.version>1.1.10</druid.version>
-		<!--recommend use HikariCP that is defined in parent-->
+		<!--recommend use HikariCP that is defined in parent -->
 
 		<!-- sharding -->
 		<sharding-jdbc.version>3.0.0.M1</sharding-jdbc.version>
@@ -94,8 +94,8 @@
 		<!--hbase was included in spring-data-hadoop -->
 		<spring-data-hadoop.version>2.5.0.RELEASE</spring-data-hadoop.version>
 		<!-- Defined in parent -->
-		<!--lettuce.version>5.1.0.M1</lettuce.version-->
-		
+		<!--lettuce.version>5.1.0.M1</lettuce.version -->
+
 
 		<!-- Stream compute -->
 		<storm.version>1.2.2</storm.version>
@@ -756,25 +756,7 @@
 					</excludes>
 				</configuration>
 			</plugin>
-			<plugin>
-				<groupId>org.jacoco</groupId>
-				<artifactId>jacoco-maven-plugin</artifactId>
-				<version>0.8.0</version>
-				<executions>
-					<execution>
-						<goals>
-							<goal>prepare-agent</goal>
-						</goals>
-					</execution>
-					<execution>
-						<id>report</id>
-						<phase>test</phase>
-						<goals>
-							<goal>report</goal>
-						</goals>
-					</execution>
-				</executions>
-			</plugin>
+
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
@@ -855,6 +837,29 @@
 						</dependencyConvergence>
 					</rules>
 				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.jacoco</groupId>
+				<artifactId>jacoco-maven-plugin</artifactId>
+				<version>0.8.0</version>
+				<executions>
+					<execution>
+						<goals>
+							<goal>prepare-agent</goal>
+						</goals>
+					</execution>
+					<execution>
+						<id>report</id>
+						<phase>test</phase>
+						<goals>
+							<goal>report</goal>
+						</goals>
+					</execution>
+				</executions>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-site-plugin</artifactId>
 			</plugin>
 		</plugins>
 	</build>
