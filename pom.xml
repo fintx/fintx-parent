@@ -765,7 +765,7 @@
 					<dependency>
 						<groupId>org.codehaus.mojo</groupId>
 						<artifactId>extra-enforcer-rules</artifactId>
-						<version>1.0-beta-7</version>
+						<version>1.0-beta-9</version>
 					</dependency>
 				</dependencies>
 				<executions>
@@ -774,6 +774,7 @@
 						<phase>package</phase>
 						<goals>
 							<goal>enforce</goal>
+							<goal>display-info</goal>
 						</goals>
 					</execution>
 				</executions>
@@ -794,6 +795,8 @@
 								<exclude>log4j:log4j</exclude>
 								<exclude>org.slf4j:slf4j-log4j12</exclude>
 								<exclude>org.slf4j:slf4j-log4j13</exclude>
+								<!-- logback is not recommend -->
+								<exclude>ch.qos.logback:*</exclude>
 								<exclude>org.springframework:*:[,5.0.0.RELEASE]:jar</exclude>
 								<exclude>commons-beanutils:commons-beanutils:[,1.8.3]:jar</exclude>
 							</excludes>
@@ -802,7 +805,7 @@
 								<include>org.apache.logging.log4j:log4j-core:[2.11.0,]</include>
 								<include>org.apache.logging.log4j:log4j-slf4j-impl:[2.11.0,]</include>
 							</includes>
-							<message>must use log4j2 and spring above 5.0.0</message>
+							<message>Use log4j2 and spring above 5.0.0</message>
 						</bannedDependencies>
 
 						<evaluateBeanshell>
@@ -833,8 +836,12 @@
 							<message>[ERROR] [Enforcer Rules] find DuplicateClasses</message>
 						</banDuplicateClasses>
 						<dependencyConvergence>
-							<uniqueVersion>false</uniqueVersion>
 						</dependencyConvergence>
+						<banCircularDependencies />
+						<requireEncoding>
+							<encoding>UTF-8</encoding>
+							<includes>src/main/resources/**,src/test/resources/**</includes>
+						</requireEncoding>
 					</rules>
 				</configuration>
 			</plugin>
