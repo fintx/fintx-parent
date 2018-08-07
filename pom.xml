@@ -905,10 +905,10 @@
 				</executions>
 			</plugin>
 			<plugin>
-				<groupId>org.codehaus.mojo</groupId>
-				<artifactId>findbugs-maven-plugin</artifactId>
+				<groupId>com.github.hazendaz.spotbugs</groupId>
+				<artifactId>spotbugs-maven-plugin</artifactId>
 				<!-- specify version remove the version warning -->
-				<version>3.0.5</version>
+				<version>3.0.6</version>
 				<executions>
 					<execution>
 						<goals>
@@ -917,6 +917,13 @@
 					</execution>
 				</executions>
 				<configuration>
+					<plugins>
+       					     <plugin>
+           					     <groupId>com.mebigfatguy.fb-contrib</groupId>
+           					     <artifactId>fb-contrib</artifactId>
+           					     <version>7.4.3.sb</version>
+         					   </plugin>
+    					</plugins>
 					<sourceEncoding>${project.build.sourceEncoding}</sourceEncoding>
 					<language>java</language>
 					<verbose>true</verbose>
@@ -1095,8 +1102,17 @@
 				</reportSets>
 			</plugin>
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-jdeps-plugin</artifactId>
+				<groupId>com.github.hazendaz.spotbugs</groupId>
+				<artifactId>spotbugs-maven-plugin</artifactId>
+				<configuration>
+   				     <plugins>
+      				          <plugin>
+        				        <groupId>com.mebigfatguy.fb-contrib</groupId>
+        					<artifactId>fb-contrib</artifactId>
+        				        <version>7.4.3.sb</version>
+       				          </plugin>
+   				     </plugins>
+  				  </configuration>
 			</plugin>
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
