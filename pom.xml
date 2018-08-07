@@ -619,6 +619,7 @@
 			</snapshots>
 			<releases>
 				<enabled>true</enabled>
+				<updatePolicy>never</updatePolicy>
 			</releases>
 		</repository>
 		<repository>
@@ -641,6 +642,7 @@
 			<url>http://repo.spring.io/milestone</url>
 			<releases>
 				<enabled>true</enabled>
+				<updatePolicy>daily</updatePolicy>
 			</releases>
 		</repository>
 	</repositories>
@@ -654,6 +656,7 @@
 				<enabled>false</enabled>
 			</snapshots>
 			<releases>
+				<enabled>true</enabled>
 				<updatePolicy>never</updatePolicy>
 			</releases>
 		</pluginRepository>
@@ -669,6 +672,7 @@
 			<url>http://repo.spring.io/milestone</url>
 			<releases>
 				<enabled>true</enabled>
+				<updatePolicy>daily</updatePolicy>
 			</releases>
 		</pluginRepository>
 	</pluginRepositories>
