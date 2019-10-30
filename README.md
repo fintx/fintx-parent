@@ -1,5 +1,7 @@
 ## FinTx Parent Project
 
+[![Join the chat at https://gitter.im/fintx/fintx-parent](https://badges.gitter.im/fintx/fintx-parent.svg)](https://gitter.im/fintx/fintx-parent?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.fintx/fintx-parent/badge.svg?style=flat-square)](https://maven-badges.herokuapp.com/maven-central/org.fintx/fintx-parent/)
 [![GitHub release](https://img.shields.io/github/release/fintx/fintx-parent.svg)](https://github.com/fintx/fintx-parent/releases)
 ![Apache 2](http://img.shields.io/badge/license-Apache%202-red.svg)
